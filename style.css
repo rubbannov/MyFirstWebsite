@@ -1,0 +1,313 @@
+html, body {
+    font-family: 'PT Sans Caption', sans-serif;
+    /*Определение рифта для всего документа*/
+    font-size: 16 px;
+    /*Размер шрифта*/
+    line-height: 1.5;
+    /*Высота строки*/
+    min-width: 280px;
+}
+    
+img {
+    display: inline-block; /*Это чтобы изображения по умолчанию не имели лишний отступ*/
+    }
+a {
+    transition: 0.2s ease-out;
+}
+
+* { /*универсальный селектор, применяемый ко всемтэгам*/
+    box-sizing: border-box;
+}
+/*
+font-family: 'Merriweather', serif; 
+font-family: 'PT Sans Caption', sans-serif;
+*/
+/**/
+
+
+/*
+
+БЛОК ШАПКИ -------------
+
+*/
+.header {
+    background: #64869f; /*Цвет фона под картинкой*/
+    background-image: url(start/imgs/bg-header.jpg); /*Картинка фона*/
+    background-repeat: no-repeat; /*Чтобы картинка не повторялась на больших экранах*/
+    background-position: center; /*Позиция фона в центре*/
+    background-size: cover; /*Масштабирует изображение как можно больше 
+    c сохранением пропорций изображения (изображение не становится сплющенным).*/
+    height: 99vh; /*Высота. vh - % от окна браузера*/
+    min-height: 400px;
+    color: #fff; /*Цвет шрифта*/
+    text-align: center; /*Горизонтальное выравнивание текста по центру*/
+    display: flex; /*Флекс контейнер???*/
+    flex-direction: column; /*Главная ось flex-контейнера такая же, как ось блока. Я нихуя не понял.*/
+    align-items: center; /*Свойство align-items задает выравнивание элементов вдоль поперечной оси. 
+    Применяется к родительскому элементу для flex блоков. Тоже нихуя не понятно.*/
+    justify-content: center;/*Выравнивание элементов по центру*/
+    position: relative;/*Родительская позиция главного блока*/
+}
+/*Надпись ИМЯ ФАМИЛИЯ*/
+.header__title {
+    font-size: 56px;/*Размер шрифта*/
+    line-height: 62px;/*Высотра строки*/
+    margin-bottom: 30px;/*Величина нижнего отступа от края элемента*/
+    margin-top: -50px;/*Величина верхнего отступа от края элемента*/
+    font-family: 'Merriweather', serif;/*Шрифт*/
+}
+/*Надпись СЛОГАНА*/
+.header__slogan {
+    font-size: 28px;/*Размер шрифта*/
+    line-height: 42px;/*Высота строки*/
+    /*К этой надписи применен шрифт PT Sans Caption, который прописан в самом начале. Этот класс унаследовал шрифт.*/
+}
+/*СТРЕЛКА ВНИЗ*/
+.header--arrow {
+    /*background: red; -для удобства редактирования*/
+    height: 50px;/*Высота элемента*/
+    width: 60px;/*Ширина элемента*/
+    margin-left: -30px;/*Величина отступа от левого края*/
+    font-size: 48px;/*Размер шрифта. А это шрифт*/
+    position: absolute;/*Позиция элемента. Пока нихуя не понял*/
+    bottom: 50px;/*Отступ от нижнего края родителького блока*/
+    left: 50%;/*Смещение относительно левого края браузера*/
+    
+}
+
+/*
+
+GRID ---------------------
+
+*/  /**/
+
+.container {
+    width: 1140px; /*Ширина контейнера*/
+    margin-left: auto; /*Выравниваем его по центру. Авто отступ*/
+    margin-right: auto; /*Авто отступ*/
+}
+.row:after {
+    clear: both;
+    content: "";
+    display: table; /*Вот тут я вообще нихуя не понял*/
+}
+.col-4 {
+    width: 360px; /*Ширина колонки*/
+    margin-right: 30px; /*Отступ справа колонки. Между колонками*/
+    float: left; /*Чтобы колонки обтекали друг друга с левой стороны*/
+}
+.col-4:last-child {
+    margin-right: 0px; /*Так выбирается последняя колонка. Убираем лишнее.*/
+}
+
+/*
+
+БЛОК ТЕЛА ---------------
+
+*/
+
+.portfolio {
+    padding-top: 70px; /*Внутренний отступ. */
+    padding-bottom: 100px;
+}
+.portfolio_item {
+    margin-bottom: 20px; /*Внешний отступ*/
+}
+.title {
+    font-size: 46px; /*Размер шрифта*/
+    margin-bottom: 60px; /*Нижний отступ*/
+    font-family: 'Merriweather', serif; /*Семейство шрифта*/
+    text-align: center; /*Выравнивание*/
+}
+
+.porfolio-item_img {
+    margin-bottom: 17px; /*Внешний отступ снизу*/
+}
+.porfolio-item_img img {
+    max-width: 100%;
+    width: auto;
+}
+
+.porfolio-item_title {
+    font-size: 24px; /*Размер шрифта*/
+    line-height: normal; /*Размер строки*/
+    margin-bottom: 5px; /*Нижний отступ*/
+}
+.porfolio-item_title a {
+    text-decoration: none; /*Убираем подчеркивание*/
+    color: black;/*Черный цвет*/
+    border-bottom: 1px solid #fff;/*Даем подчеркивание тонкой линией*/
+}
+.porfolio-item_title a:hover { /*Поведение ссылки при наведении курсора*/
+    color: #0052c2; /*Цвет на который поменяется ссылка*/
+    border-color: rgba(0,82,194,0.3); /*Цвет нижнего подчеркивания*/
+}
+.porfolio-item_text p { /*Стилизация тэга Р*/
+    margin-top: 0px; /*Обнуление верхнего отступа по умолчанию*/
+    margin-bottom: 15px; /*Нижний отступ*/
+}
+
+/*
+
+ОДНОСТРАНИЧНИК -------------
+
+*/ /**/
+
+.portfolio-sin-pg {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.portfolio-sin-pg img {
+    margin-bottom: 50px;
+    max-width: 100%;
+    height: auto;
+   /*  display: block; Чтобы кнопка была строго внизу картинки*/
+}
+.button-back {
+    font-weight: 700;/*Ширина шрифта*/
+    text-decoration: none;/*подчеркивание нахуй*/
+    color: #89b6d3;/*цвет*/
+    text-transform: uppercase;/*текст на КАПСЕ*/
+    letter-spacing: 1.6px;/*Расстояние между буквами*/
+    
+    display: inline-block;/*Передел из ссылки в блок, как я понял.*/
+    
+    border-width: 2px;/*Толщина(висота) рамки*/
+    border-color: #89b6d3;/*цвет рамки*/
+    border-style: solid;/*стиль рамки прямая линия*/
+    border-radius: 50px;/*закругление рамки*/
+    
+    padding-top: 8px;/*отступ вверх*/
+    padding-bottom: 8px;/*вниз*/
+    padding-left: 23px;/*влево*/
+    padding-right: 23px;/*вправо. Раздвинули так рамку от центра*/
+    margin-bottom: 13px;/*Отступ вниз*/
+    
+    transition: 0.5s ease-out;
+}
+.button-back:hover {/*поведение кнопки при наведении курсора*/
+    color: #fff;/*цвет шрифта при наведении*/
+    background-color: #89b6d3;/*цвет фона при наведении*/
+}
+/*
+
+ПОДВАЛИЩЩЕ -------------
+
+*/ /**/
+
+.footer {
+    background-color: #061634;/*Цвет фона подвала*/
+    color: #6479a2; /*Общий цвет шрифта подвала*/
+    padding-top: 90px;/*Внутренний отступ подвала*/
+    padding-bottom: 190px;/*Тоже отступ. Нижний.*/
+}
+
+.footer p { /*Все, что в подвале в тэгом Р */
+    margin-top: 0px;/*Внешний отступ*/
+    margin-bottom: 25px;/*тоже*/
+}
+
+p.footer_name { /*Так, тут наоборот, все тэги Р с классом footer_name*/
+    font-size: 28px;/*Размер шрифта*/
+    margin-bottom: 10px;/*Отступ*/
+    line-height: normal;/*Высота строки*/
+    font-family: 'Merriweather', serif;/*Его сиятельство шрифт*/
+}
+
+p.footer_social { /*все тэги Р с классом footer_name-icons*/
+    color: aliceblue;/*Цвет шрифта*/
+}
+
+p.footer_social-icons {
+    color: aliceblue;/*Цвет шрифта*/
+    font-size: 32px;/*Размер его*/
+}
+
+p.footer_social-icons a { /*все тэги Р с классом footer_social-icons. Функции конкретно для ссылки*/
+    color: aliceblue;/*Цует*/
+    text-decoration: none;/*Нижнее подчеркивание отправляем к хуям*/
+    margin-right: 30px;/*отступ*/
+    
+}
+
+p.footer_social-icons a:last-child {/*тут для последней ссылки функции*/
+    margin-right: 0px;/*отступ съебайтен раус*/
+}
+
+p.footer_social-icons a:hover {/*поведение при наведении курсора ссылок тэгов Р с класссом..ну ты понял*/
+    color: yellowgreen;/*при наведении поменяет цвет на ЖОООлтый*/
+}
+
+.botton {/*КНОПОЧКА*/
+    font-weight: 700;/*Ширина шрифта*/
+    text-decoration: none;/*подчеркивание нахуй*/
+    color: aliceblue;/*цвет*/
+    text-transform: uppercase;/*текст на КАПСЕ*/
+    letter-spacing: 1.6px;/*Расстояние между буквами*/
+    
+    display: inline-block;/*Передел из ссылки в блок, как я понял.*/
+    
+    border-width: 2px;/*Толщина(висота) рамки*/
+    border-color: aliceblue;/*цвет рамки*/
+    border-style: solid;/*стиль рамки прямая линия*/
+    border-radius: 50px;/*закругление рамки*/
+    
+    padding-top: 8px;/*отступ вверх*/
+    padding-bottom: 8px;/*вниз*/
+    padding-left: 23px;/*влево*/
+    padding-right: 23px;/*вправо. Раздвинули так рамку от центра*/
+    margin-bottom: 13px;/*Отступ вниз*/
+    
+    transition: 0.5s ease-out;   
+}
+
+.botton:hover {/*поведение кнопки при наведении курсора*/
+    color: #061634;/*цвет шрифта при наведении*/
+    background-color: aliceblue;/*цвет фона при наведении*/
+}
+
+/*
+
+МЕДИА -------------
+
+*/
+
+@media (max-width: 1160px) { /*При ширине в 1160пкс и менее*/
+    .container {
+        width: 100%;
+    }
+    .col-4 {
+        width: 100%; /*Реальная ширина=width100%+paddings 15+15= 100%+30пкс */
+        margin: 0;
+        margin-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        box-sizing: border-box; /*И чтобы не было лишних отступов, нужно переопределить способ подсчета. По умолчанию content-box*/
+    }
+    .header{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .header__title {
+        font-size: 38px;
+        line-height: 48px;
+        margin-bottom: 15px;
+    }
+    .header__slogan {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .portfolio {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    .title {
+        font-size: 36px;
+    }
+    .footer {
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
+}
